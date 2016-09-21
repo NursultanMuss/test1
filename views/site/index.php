@@ -15,7 +15,7 @@
 
 <div id="fullpage">
     <?php foreach ($sitePages as $siteItem):?>
-    <div class="section<?php echo $siteItem['id']; ?>" style="background: url('/template/images/<?php echo $siteItem['section_background'];?>') repeat fixed 100% 0% / cover;">
+    <div class="section page<?php echo $siteItem['id']; ?>" style="background: url('/template/images/<?php echo $siteItem['section_background'];?>')no-repeat 100% 0% / cover;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
@@ -24,14 +24,21 @@
                     </div>
                     <h4 class="slide_text"><?php echo $siteItem['slide_text'];?></h4>
                     <div class="slide_graphiks">
-                        <div class="googleYandex">
+                        <?php  if($siteItem['id'] == 1) {
+                             echo '
+                             <div class="googleYandex">
                             <div class="google">
-                                <img src="/template/images/<?php echo $siteItem['google'];?>" alt="google" class="img-responsive">
+                                <img src="/template/images/' . $siteItem['google'] .'" alt="" class="img-responsive">
                             </div>
                             <div class="Yandex">
-                                <img src="/template/images/<?php echo $siteItem['yandex'];?>" alt="Yandex_logo" class="img-responsive">
+                                <img src="/template/images/'.$siteItem['yandex'].'" alt="" class="img-responsive">
                             </div>
-                        </div>
+                        </div>'
+                             ;
+
+                        }
+                        ?>
+
                         <div class="dostizhenia">
                             <div class="col-1">
                                 <div class="graphik">

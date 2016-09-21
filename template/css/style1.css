@@ -1,6 +1,24 @@
 #first_slide{
 	background-color: #eb7347;
 }
+.page4 .fp-tableCell{
+vertical-align: bottom;
+}
+.page4 .woman{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width:51%;
+}
+.section{
+	text-align: center;
+}
+.slide_text{
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
 html.fsvs #fsvs-pagination{
 	margin: 0;
 	padding: 8px 4px;
@@ -41,52 +59,23 @@ html.fsvs #fsvs-pagination li>span{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-#fullpage .section{
-	background: url("/template/images/main-page-2.jpg") repeat fixed 100% 0% / cover;
-  text-align: center;
-}
+/*#fullpage .section{*/
+	/*background: url("/template/images/main-page-2.jpg") repeat fixed 100% 0% / cover;*/
+  /*text-align: center;*/
+/*}*/
 
-.Page1content{
-	display: block;
-	position: absolute;
-    top: 20%;
-    left: 7%;
-}
-.Page1content .logoSeo{
-		background: url("image/SeoPromotion.png") no-repeat center center;
-	background-size: contain;
-	white-space: nowrap;
-    width: 100%;
-    height: 250px;
-}
-.Page1content .prodvizhenie{
-	text-transform: uppercase;
-	text-align: center;
-	color: #FFFFFF;
-    font-size: 16px;
-    margin-top: 20px;
-}
+
 .googleYandex{
 	    margin-top: 20px;
     vertical-align: baseline;
 }
 .google{
 	display:inline-block;
-	background: url("../image/google.png") no-repeat center center;
-	background-size: contain;
-	white-space: nowrap;
-	width: 109px;
-	height: 36px;
-	    vertical-align: bottom;
+	vertical-align: bottom;
     margin-right: 20px;
 }
 .Yandex{
 	display:inline-block;
-	background: url("image/Yandex.png") no-repeat center center;
-	background-size: contain;
-	white-space: nowrap;
-	width: 109px;
-	height: 36px;
 }
 .dostizhenia{
 	margin-top: 20px;
@@ -102,23 +91,16 @@ html.fsvs #fsvs-pagination li>span{
 }
 .col-1 .graphik{
 	position:absolute;
-	width: 25px;
-	height:29px;
-	background: url('image/19370-200.png') ;
 	left: 0px;
+	top: 5px;
 }
 .col-1 .superMan{
 	position:absolute;
-	width: 39px;
-	height:29px;
-	background: url('image/23554-200.png') ;
 	left:-5px;
+	top: 7px;
 }
 .col-1 .lamp{
 	position:absolute;
-	width: 21px;
-	height:38px;
-	background: url('image/148388-200.png') ;
 	left: 10px;
 }
 .discription{

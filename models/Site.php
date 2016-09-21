@@ -6,7 +6,7 @@ class Site
         $db=DB::getConnection();
         $sitePages= array();
 
-        $result= $db->querry('SELECT id, section_background, page_logo, slide_text, google, yandex, superman FROM mainpage ORDER BY id ASC');
+        $result= $db->query('SELECT id, section_background, page_logo, slide_text, google, yandex, superman FROM mainpage ORDER BY id ASC');
 
         $i= 0;
         while ($row = $result->fetch()){
