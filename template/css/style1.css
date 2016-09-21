@@ -1,0 +1,301 @@
+#first_slide{
+	background-color: #eb7347;
+}
+html.fsvs #fsvs-pagination{
+	margin: 0;
+	padding: 8px 4px;
+	position: fixed;
+	height: auto;
+	top: 50%;
+	z-index: 999;
+	width: 32px;
+}
+html.fsvs #fsvs-pagination li{
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	line-height:25px;
+	text-align: center;
+	margin: 0 0 2px 0;
+	cursor: pointer;
+}
+li{
+	display: list-item;
+}
+html.fsvs #fsvs-pagination li.active>span{
+	border: 1px dashed white;
+}
+html.fsvs #fsvs-pagination li>span{
+	    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+	border-radius: 100%;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	display:block
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#fullpage .section{
+	background: url("/template/images/main-page-2.jpg") repeat fixed 100% 0% / cover;
+  text-align: center;
+}
+
+.Page1content{
+	display: block;
+	position: absolute;
+    top: 20%;
+    left: 7%;
+}
+.Page1content .logoSeo{
+		background: url("image/SeoPromotion.png") no-repeat center center;
+	background-size: contain;
+	white-space: nowrap;
+    width: 100%;
+    height: 250px;
+}
+.Page1content .prodvizhenie{
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.googleYandex{
+	    margin-top: 20px;
+    vertical-align: baseline;
+}
+.google{
+	display:inline-block;
+	background: url("../image/google.png") no-repeat center center;
+	background-size: contain;
+	white-space: nowrap;
+	width: 109px;
+	height: 36px;
+	    vertical-align: bottom;
+    margin-right: 20px;
+}
+.Yandex{
+	display:inline-block;
+	background: url("image/Yandex.png") no-repeat center center;
+	background-size: contain;
+	white-space: nowrap;
+	width: 109px;
+	height: 36px;
+}
+.dostizhenia{
+	margin-top: 20px;
+}
+.col-1{
+	position:relative;
+	padding-left: 40px;
+	display:inline-block;
+	margin-right: 20px;
+}
+.col-1:last-child{
+	margin-right: 0px;
+}
+.col-1 .graphik{
+	position:absolute;
+	width: 25px;
+	height:29px;
+	background: url('image/19370-200.png') ;
+	left: 0px;
+}
+.col-1 .superMan{
+	position:absolute;
+	width: 39px;
+	height:29px;
+	background: url('image/23554-200.png') ;
+	left:-5px;
+}
+.col-1 .lamp{
+	position:absolute;
+	width: 21px;
+	height:38px;
+	background: url('image/148388-200.png') ;
+	left: 10px;
+}
+.discription{
+	text-transform:uppercase;
+	color: #FFFFFF;
+	font-size: 12px;
+	text-align:left;
+}
+.strelka{
+	position:absolute;
+	width: 53px;
+	height: 82px;
+	background: url('image/bottom.png');
+	bottom: 15px;
+	left:50%;
+}
+.menu1 {
+  background: #ED2A11;
+  left: -25%;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 25%;
+}
+
+/* Basic styling */
+
+
+.menu1 ul.first{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-height: 300px;
+	margin-top:14%;
+	}
+.menu1 ul.first > li {
+
+  font-family: 'Open Sans', sans-serif;
+  line-height: 100%;
+  padding-bottom: 3px;
+  padding-left: 15%;
+  padding-top: 3px;
+  font-weight: 800;
+  font-size: 25px;
+  
+}
+
+.menu1 a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+ 
+}
+
+.menu1 ul.second{
+	list-style: none;
+	margin: 0;
+	padding: 1% 0% 0% 15%;
+}
+.menu1 ul.second > li{
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-right: 25px;
+  padding-top: 25px;
+  text-align: right;
+}
+
+.icon-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+.icon-menu .bar{
+	background: url('image/menu.png') no-repeat center center;
+	background-size: contain;
+    white-space: nowrap;
+	display: inline-block;
+	width: 46px;
+	height: 30px;
+	position: absolute;
+	top: 14%;
+}
+.icon-menu .menuGreengoLogo{
+	background: url('image/greengoLogo.png')no-repeat center center;
+	background-size: contain;
+    white-space: nowrap;
+	display: inline-block;
+	width: 164px;
+	height: 47px;
+	margin-left: 65px;
+	
+}
+.menu1 .menuGreengoLogo{
+	background: url('image/greengoLogo.png')no-repeat center center;
+	background-size: contain;
+    white-space: nowrap;
+	width: 164px;
+	height: 47px;
+	margin-top:20%;
+	margin-right:auto;
+	margin-left: auto;
+	}
+	.well{
+		background-color: inherit;
+		border:none;
+		padding: 0px;
+		margin-bottom: 0px;
+		-webkit-box-shadow: none;
+		}
+		
+		/* Last doing*/
+	.menuBottom .content{
+	line-height: 1.6;
+	color: #fff;
+	margin-left:40%;
+	font-size: 14px;
+	font-family: Verdana, sans-serif;
+	}
+	.menuBottom .phoneLogo{
+		background: url('image/menu-phone-logo.png') no-repeat center center;
+		background-size:contain;
+		white-space:nowrap;
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		top:30%;
+		left: 28%;
+	}
+	.menuBottom .emailLogo{
+		background: url('image/menu-message-logo.png') no-repeat center center;
+		background-size:contain;
+		white-space:nowrap;
+		width: 27px;
+		height: 18px;
+		position: absolute;
+		left: 28%;
+	}
+	.menuBottom .facebookLogo{
+		background: url('image/menu-facebook-logo.png') no-repeat center center;
+		background-size:contain;
+		white-space:nowrap;
+		width: 12px;
+		height: 25px;
+		display: inline-block;
+		margin-right: 10%;
+	}
+	.menuBottom .vkLogo{
+	background: url('image/menu-vk-logo.png') no-repeat center center;
+		background-size:contain;
+		white-space:nowrap;
+		width: 18px;
+		height: 23px;
+		display: inline-block;
+		margin-right: 8%;
+	}
+	.menuBottom .twLogo{
+		background: url('image/menu-twitter-logo.png') no-repeat center center;
+		background-size:contain;
+		white-space:nowrap;
+		width: 25px;
+		height: 21px;
+		display: inline-block;
+	}
+	.menuContent {
+		box-sizing: border-box;
+		min-height: 100%;
+		padding-bottom: 90px;
+	}
+	.menuBottom{
+		height: 130px;
+  margin-top: -200px;
+	}
+	.social-links{
+		margin-top: 8%;
+	}
+	
