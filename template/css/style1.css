@@ -1,14 +1,24 @@
 #first_slide{
 	background-color: #eb7347;
 }
-.page4 .fp-tableCell{
-vertical-align: bottom;
+#page4 .fp-tableCell{
+
 }
-.page4 .woman{
+#page3 .woman{
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	width:51%;
+}
+#page4 .woman{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width:51%;
+	position: absolute;
+	top: 0px;
+	right: 50%;
+	margin-right: -153px;
 }
 .section{
 	text-align: center;
@@ -18,6 +28,14 @@ vertical-align: bottom;
 	text-transform: uppercase;
 	margin-top: 20px;
 }
+/*Для основных блоков*/
+.left{
+	padding-left: 60px!important;
+}
+.right{
+	padding-right: 60px !important;
+}
+/*Для основных блоков 	КОНЕЦ*/
 
 html.fsvs #fsvs-pagination{
 	margin: 0;
@@ -111,9 +129,6 @@ html.fsvs #fsvs-pagination li>span{
 }
 .strelka{
 	position:absolute;
-	width: 53px;
-	height: 82px;
-	background: url('image/bottom.png');
 	bottom: 15px;
 	left:50%;
 }

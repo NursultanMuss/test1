@@ -11,14 +11,14 @@
 
 </head>
 <body>
-
+<!-- <?php //include ROOT.'/views/layout/sidebar.php'?>-->
 
 <div id="fullpage">
     <?php foreach ($sitePages as $siteItem):?>
-    <div class="section page<?php echo $siteItem['id']; ?>" style="background: url('/template/images/<?php echo $siteItem['section_background'];?>')no-repeat 100% 0% / cover;">
+    <div id="page<?php echo $siteItem['id']; ?>" class="section " style="background: url('/template/images/<?php echo $siteItem['section_background'];?>')no-repeat 100% 0% / cover;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 left">
                     <div class="page_logo center-block">
                         <img class="img-responsive center-block" src="/template/images/<?php echo $siteItem['page_logo'];?>">
                     </div>
@@ -63,21 +63,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 right">
                     <div class="woman">
                         <img class="img-responsive center-block" src="/template/images/<?php echo $siteItem['superman'] ?>">
                     </div>
                 </div>
-                <div class="strelka">
-                    <a href="http://nurrrs.kz/#second_slide"><img src="/template/images/strelka.png" alt="strelka" class="img-responsive"></a>
-                </div>
+                <?php
+                    if($siteItem['id'] !=4){
+                        echo '<div class="strelka">
+                    <a href="'. ROOT.'/#'.($siteItem['id']+1).'"><img src="/template/images/strelka.png" alt="strelka" class="img-responsive"></a>
+            </div>';
+                    }
+                ?>
+
+
             </div>
         </div></div>
     <?php endforeach;?>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
 </div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -86,10 +88,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
+<!--<script src="/template/js/jquery-3.1.0.js" ></script>-->
 <script>
     $(document).ready(function() {
         $('#fullpage').fullpage();
     });
 </script>
+
 </body>
 </html>
