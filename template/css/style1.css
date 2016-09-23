@@ -143,23 +143,31 @@ html.fsvs #fsvs-pagination li>span{
 /* Basic styling */
 
 
-.menu1 ul.first{
+.sidebar-wrapper ul.first{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	max-height: 300px;
-	margin-top:14%;
+	margin-top:20%;
 	}
-.menu1 ul.first > li {
-
-  font-family: 'Open Sans', sans-serif;
-  line-height: 100%;
-  padding-bottom: 3px;
-  padding-left: 15%;
+.sidebar-wrapper ul.first > li {
+  font-family:  'Candara' ;
+  line-height: 40px;
+  padding-bottom: 7px;
+  padding-left: 35px;
   padding-top: 3px;
-  font-weight: 800;
-  font-size: 25px;
+  font-weight: 200;
+  font-size: 28px;
   
+}
+.sidebar-wrapper li:hover{
+	text-decoration: none;
+	color: #fff;
+	background: #961f1f;
+	webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease-out;
 }
 
 .menu1 a {
@@ -168,8 +176,7 @@ html.fsvs #fsvs-pagination li>span{
   text-decoration: none;
  
 }
-
-.menu1 ul.second{
+ ul.second{
 	list-style: none;
 	margin: 0;
 	padding: 1% 0% 0% 15%;
@@ -191,6 +198,7 @@ html.fsvs #fsvs-pagination li>span{
   position: absolute;
   top: 7%;
   left: 5%;
+	z-index: 10;
 }
 .icon-menu .bar{
 	background: url('image/menu.png') no-repeat center center;
@@ -210,14 +218,8 @@ html.fsvs #fsvs-pagination li>span{
 	width: 164px;
 	height: 47px;
 	margin-left: 65px;
-	
 }
-.menu1 .menuGreengoLogo{
-	background: url('image/greengoLogo.png')no-repeat center center;
-	background-size: contain;
-    white-space: nowrap;
-	width: 164px;
-	height: 47px;
+.sidebar-wrapper .menuGreengoLogo{
 	margin-top:20%;
 	margin-right:auto;
 	margin-left: auto;
@@ -289,10 +291,81 @@ html.fsvs #fsvs-pagination li>span{
 		padding-bottom: 90px;
 	}
 	.menuBottom{
-		height: 130px;
-  margin-top: -200px;
+  margin-top: 55px;
 	}
 	.social-links{
 		margin-top: 8%;
 	}
-	
+	/*fonts*/
+@font-face {
+	font-family: 'condensbold';
+	src: url('/template/fonts/condens-bold.eot');
+	src: url('/template/fonts/condens-bold.eot?#iefix') format('embedded-opentype'),
+	url('/template/fonts/condens-bold.woff') format('woff'),
+	url('/template/fonts/condens-bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'condensbold_italic';
+	src: url('/template/fonts/condens-bold-italic.eot');
+	src: url('/template/fonts/condens-bold-italic.eot?#iefix') format('embedded-opentype'),
+	url('/template/fonts/condens-bold-italic.woff') format('woff'),
+	url('/template/fonts/condens-bold-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Condens-BoldItalic';
+	src: url('/template/fonts/Condens-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	url('/template/fonts/Condens-BoldItalic.woff') format('woff'),
+	url('/template/fonts/Condens-BoldItalic.ttf') format('truetype'),
+	url('/template/fonts/Condens-BoldItalic.svg#Condens-BoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family:'Candara';
+	src: url('/template/fonts/Candara.ttf') format('truetype'),
+	url('/template/fonts/Candara.eot') format('embedded-opentype'),
+	url('/template/fonts/Candara.svg') format('svg'),
+	url('/template/fonts/Candara.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*Scrollbar*/
+::-webkit-scrollbar-button {
+	background-image:url('');
+	background-repeat:no-repeat;
+	width:5px;
+	height:0px;
+}
+
+::-webkit-scrollbar-track {
+	background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	background-color:#6dc0c8;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color:#56999f;
+}
+
+::-webkit-resizer{
+	background-image:url('');
+	background-repeat:no-repeat;
+	width:4px;
+	height:0px
+}
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+/*end of ScrollBar*/
