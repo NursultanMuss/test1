@@ -7,17 +7,13 @@
         <img src="/template/images/greengoLogo.png" alt="greengo Logo" class="img-responsive center-block">
     </div>
     <ul class="sidebar-nav first">
-        <li>
-            <a href="#spoiler-1" data-toggle="collapse">О компании</a>
-            <div class="collapse" id="spoiler-1">
-                <div class="well">
-                    <ul class="second">
-                        <li><a href="ab_company.html">Достижения</a></li>
-                        <li><a href="#">миссия</a></li>
-                        <li><a href="#">команда</a></li> 
-                    </ul>
-                </div>
-            </div>
+        <li id="first_menu">
+            <a>О компании</a>
+            <ul id="second">
+                <li><a href="ab_company.html">Достижения</a></li>
+                <li><a href="#">миссия</a></li>
+                <li><a href="#">команда</a></li>
+            </ul>
         </li>
         <li>
             <a href="">Проекты</a>

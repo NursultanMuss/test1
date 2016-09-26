@@ -147,27 +147,22 @@ html.fsvs #fsvs-pagination li>span{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	max-height: 300px;
-	margin-top:20%;
+	margin-top:16%;
 	}
 .sidebar-wrapper ul.first > li {
   font-family:  'Candara' ;
-  line-height: 40px;
-  padding-bottom: 7px;
-  padding-left: 35px;
-  padding-top: 3px;
+  line-height: 1.5;
   font-weight: 200;
   font-size: 28px;
-  
 }
 .sidebar-wrapper li:hover{
-	text-decoration: none;
-	color: #fff;
-	background: #961f1f;
-	webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease-out;
+	/*text-decoration: none;*/
+	/*color: #fff;*/
+	/*background: #961f1f;*/
+	/*webkit-transition: all 0.5s ease;*/
+	/*-moz-transition: all 0.5s ease;*/
+	/*-o-transition: all 0.5s ease;*/
+	/*transition: all 0.5s ease-out;*/
 }
 
 .menu1 a {
@@ -176,14 +171,16 @@ html.fsvs #fsvs-pagination li>span{
   text-decoration: none;
  
 }
- ul.second{
+ ul#second{
 	list-style: none;
-	margin: 0;
+	 margin: 0;
 	padding: 1% 0% 0% 15%;
+	 display: none;
+	 list-style: none;
+	 font-size:;
 }
-.menu1 ul.second > li{
-	font-size: 15px;
-	font-weight: 400;
+ul#second a {
+	font-size: 22px;
 }
 
 .icon-close {
@@ -295,6 +292,7 @@ html.fsvs #fsvs-pagination li>span{
 	}
 	.social-links{
 		margin-top: 8%;
+
 	}
 	/*fonts*/
 @font-face {

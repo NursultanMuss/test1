@@ -102,6 +102,17 @@
         $(".wrapper").toggleClass("toggled");
     });
 </script>
+<script>
+    window.onload=function(){
+        var a = document.querySelector('#first_menu');
+        a.onmouseout=function(e){
+          document.getElementById('second').style.display='block';
+        };
+        a.onmouseover=function (e) {
+            document.getElementById('second').style.display='block';
+        };
+    };
+</script>
 
 </body>
 </html>
