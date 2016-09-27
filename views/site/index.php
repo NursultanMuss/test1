@@ -17,7 +17,7 @@
 
 <div id="fullpage" class="page-content-wrapper">
     <?php foreach ($sitePages as $siteItem):?>
-    <div id="page<?php echo $siteItem['id']; ?>" class="section " style="background: url('/template/images/<?php echo $siteItem['section_background'];?>')no-repeat 100% 0% / cover;">
+    <div id="page<?php echo $siteItem['id']; ?>" class="section " data-anchor="page<?php echo $siteItem['id']; ?>" style="background: url('/template/images/<?php echo $siteItem['section_background'];?>')no-repeat 100% 0% / cover;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 left">
@@ -83,6 +83,14 @@
         </div></div>
     <?php endforeach;?>
 </div>
+<div class="vline" style="margin-top:-95px;"></div>
+
+<ul id="pagination" >
+    <li data-menuanchor="fullpage1" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
+    <li data-menuanchor="fullpage2" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
+    <li data-menuanchor="fullpage3" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
+    <li data-menuanchor="fullpage4" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
+</ul>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="/template/js/jquery.fullPage.js"></script>
@@ -93,7 +101,12 @@
 <!--<script src="/template/js/jquery-3.1.0.js" ></script>-->
 <script>
     $(document).ready(function() {
-        $('#fullpage').fullpage();
+        $('#fullpage').fullpage({
+            anchors: ["fullpage1","fullpage2", "fullpage3","fullpage4"],
+            menu: '#pagination',
+//            navigation: true,
+//            navigationPosition: right;
+        });
     });
 </script>
 <script>
@@ -106,12 +119,34 @@
     window.onload=function(){
         var a = document.querySelector('#first_menu');
         a.onmouseout=function(e){
-          document.getElementById('second').style.display='block';
+          document.getElementById('second').style.display='none';
+            var b=document.getElementsByClassName('first');
+            var elements=b[0].getElementsByTagName('li');
+            for(var i=0;i<elements.length; i++){
+                var input=elements[i];
+                input.style.lineHeight=1.5;
+            }
         };
         a.onmouseover=function (e) {
             document.getElementById('second').style.display='block';
+            var b=document.getElementsByClassName('first');
+            var elements=b[0].getElementsByTagName('li');
+            for(var i=0;i<elements.length; i++){
+                var input=elements[i];
+                input.style.lineHeight=1;
+            }
         };
     };
+</script>
+<script>
+    addPagination : function() {
+        pagination = $('<ul id="pagination"></ul>');
+        var paginationHeight = pagination.height();
+        pagination.css({
+            marginTop : '-' + (paginationHeight/2) + 'px',
+            right : '25px'
+        });
+    }
 </script>
 
 </body>
