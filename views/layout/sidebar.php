@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper">
 
-    <div class="icon-close">
-        <a href="#menu-toggle" class="menu-toggle"><img class="img-responsiv" src="/template/images/menu-X.png" alt="close_menu"></a>
+    <div class="icon-close pull-right">
+        <a href="#menu-toggle" class="menu-toggle"><img class="img-responsive" src="/template/images/menu-X.png" alt="close_menu"></a>
     </div>
     <div class="menuGreengoLogo" style="">
         <img src="/template/images/greengoLogo.png" alt="greengo Logo" class="img-responsive center-block">

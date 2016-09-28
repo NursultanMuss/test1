@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c3e8f039-b440-4845-92f1-2c700bbff767" name="nursultanm.tk" url="http://ftp.nursultanm.tk">
+        <fileTransfer host="ftp.nursultanm.tk" port="21" rootFolder="/public_html" username="u939325013">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf8" dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

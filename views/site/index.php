@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/template/css/simple-sidebar.css">
     <link rel="stylesheet" href="/template/css/jquery.fullPage.css">
     <link rel="stylesheet" href="/template/css/style1.css">
-
 </head>
 <body class="wrapper">
 <?php include ROOT.'/views/layout/sidebar.php'?>
@@ -73,7 +72,7 @@
                 <?php
                     if($siteItem['id'] !=4){
                         echo '<div class="strelka">
-                    <a href="'. ROOT.'/#'.($siteItem['id']+1).'"><img src="/template/images/strelka.png" alt="strelka" class="img-responsive"></a>
+                    <a href="#fullpage'.($siteItem['id']+1).'"><img src="/template/images/strelka.png" alt="strelka" class="img-responsive"></a>
             </div>';
                     }
                 ?>
@@ -85,7 +84,7 @@
 </div>
 <div class="vline" style="margin-top:-95px;"></div>
 
-<ul id="pagination" >
+<ul id="pagination" style="right: 29px; margin-top: -109px;" >
     <li data-menuanchor="fullpage1" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
     <li data-menuanchor="fullpage2" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
     <li data-menuanchor="fullpage3" class="pagination-link"><span style="transition: all 1s;"><span style="transition: all 1s;"></span></span></li>
@@ -116,7 +115,7 @@
     });
 </script>
 <script>
-    window.onload=function(){
+    function ready(){
         var a = document.querySelector('#first_menu');
         a.onmouseout=function(e){
           document.getElementById('second').style.display='none';
@@ -137,16 +136,7 @@
             }
         };
     };
-</script>
-<script>
-    addPagination : function() {
-        pagination = $('<ul id="pagination"></ul>');
-        var paginationHeight = pagination.height();
-        pagination.css({
-            marginTop : '-' + (paginationHeight/2) + 'px',
-            right : '25px'
-        });
-    }
+    document.addEventListener("DOMContentLoaded", ready);
 </script>
 
 </body>

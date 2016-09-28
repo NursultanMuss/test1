@@ -132,6 +132,9 @@ html.fsvs #fsvs-pagination li>span{
 	bottom: 15px;
 	left:50%;
 }
+.strelka a:active{
+
+}
 .menu1 {
   background: #ED2A11;
   left: -25%;  /* start off behind the scenes */
@@ -183,6 +186,7 @@ ul#second a {
 }
 
 .icon-close {
+	display: inline-block;
   cursor: pointer;
   padding-right: 25px;
   padding-top: 25px;
@@ -206,7 +210,7 @@ ul#second a {
 	margin-left: 65px;
 }
 .sidebar-wrapper .menuGreengoLogo{
-	margin-top:20%;
+	margin-top:35%;
 	margin-right:auto;
 	margin-left: auto;
 	}
