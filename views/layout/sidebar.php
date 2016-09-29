@@ -4,19 +4,19 @@
         <a href="#menu-toggle" class="menu-toggle"><img class="img-responsive" src="/template/images/menu-X.png" alt="close_menu"></a>
     </div>
     <div class="menuGreengoLogo" style="">
-        <img src="/template/images/greengoLogo.png" alt="greengo Logo" class="img-responsive center-block">
+        <a href="/"><img src="/template/images/greengoLogo.png" alt="greengo Logo" class="img-responsive center-block"></a>
     </div>
     <ul class="sidebar-nav first">
         <li id="first_menu">
-            <a>О компании</a>
+            <a href="/company">О компании</a>
             <ul id="second">
-                <li><a href="ab_company.html">Достижения</a></li>
-                <li><a href="#">миссия</a></li>
-                <li><a href="#">команда</a></li>
+                <li><a href="/company#fullpage2">Достижения</a></li>
+                <li><a href="/company#fullpage3">Миссия</a></li>
+                <li><a href="/company#fullpage4">Команда</a></li>
             </ul>
         </li>
         <li>
-            <a href="">Проекты</a>
+            <a href="/projects">Проекты</a>
         </li>
         <li>
             <a href="">Студия</a>
@@ -28,7 +28,7 @@
             <a href="">Корпоративные заметки</a>
         </li>
         <li>
-            <a href="">Контакты</a>
+            <a href="/contacts">Контакты</a>
         </li>
     </ul>
 

@@ -1,6 +1,6 @@
 <?php
 include_once ROOT. '/models/Company.php';
-class SiteController
+class CompanyController
 {
 
 
@@ -8,7 +8,7 @@ class SiteController
 	{
 		$companyPages= array();
 		$companyPages= Company::getCompanyPages();
-		require_once(ROOT. '/views/company/index.php');
+		require_once(ROOT.'/views/company/index.php');
 		return true;
 	}
 

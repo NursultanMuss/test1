@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 right">
+                <div class="hidden-xs hidden-sm col-md-5 col-lg-5 right">
                     <div class="woman">
                         <img class="img-responsive center-block" src="/template/images/<?php echo $siteItem['superman'] ?>">
                     </div>
@@ -138,6 +138,7 @@
     };
     document.addEventListener("DOMContentLoaded", ready);
 </script>
+
 
 </body>
 </html>

@@ -1,3 +1,6 @@
+html body{
+	color: #ffffff;
+}
 #first_slide{
 	background-color: #eb7347;
 }
@@ -37,41 +40,6 @@
 }
 /*Для основных блоков 	КОНЕЦ*/
 
-html.fsvs #fsvs-pagination{
-	margin: 0;
-	padding: 8px 4px;
-	position: fixed;
-	height: auto;
-	top: 50%;
-	z-index: 999;
-	width: 32px;
-}
-html.fsvs #fsvs-pagination li{
-	list-style: none;
-	width: 25px;
-	height: 25px;
-	line-height:25px;
-	text-align: center;
-	margin: 0 0 2px 0;
-	cursor: pointer;
-}
-li{
-	display: list-item;
-}
-html.fsvs #fsvs-pagination li.active>span{
-	border: 1px dashed white;
-}
-html.fsvs #fsvs-pagination li>span{
-	    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-	border-radius: 100%;
-	width: 22px;
-	height: 22px;
-	line-height: 22px;
-	display:block
-}
 *, *:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -131,6 +99,7 @@ html.fsvs #fsvs-pagination li>span{
 	position:absolute;
 	bottom: 15px;
 	left:50%;
+    margin-left: -41px;
 }
 .strelka a:active{
 
@@ -145,7 +114,7 @@ html.fsvs #fsvs-pagination li>span{
 
 /* Basic styling */
 
-
+/*Sidebar*/
 .sidebar-wrapper ul.first{
 	list-style: none;
 	margin: 0;
@@ -260,8 +229,10 @@ ul#second a {
 	}
 	.social-links{
 		margin-top: 8%;
-
 	}
+/*end of Sidebar*/
+
+
 	/*fonts*/
 @font-face {
 	font-family: 'condensbold';
@@ -405,4 +376,268 @@ ul#second a {
 	z-index: 10;
 	right: 41px;
 	top: 50%;
+}
+/*End of Pagination*/
+
+/*CompanyPage*/
+.pageText{
+	font-family:'Candara';
+    text-align: left;
+    margin-left: 125px;
+}
+.pageText h1{
+	font-size: 100px;
+	font-weight: 700;
+	text-transform: Uppercase;
+	font-family: 'condensbold';
+}
+.pageText p{
+	font-size: 16px;
+}
+.pageText h1{
+	margin-bottom: 20px;
+}
+.pageText h2,h3,h4,h5,h6{
+	margin-bottom: 0px;
+	text-transform: Uppercase;
+}
+#companyPage1 .pageText{
+    margin-top: 16%;
+    margin-left: 125px;
+}
+.mailBox{
+	margin-left: 130px;
+	border: 2px solid white;
+	display: inline-block;
+	margin-top: 4%;
+	padding: 10px 15px 3px;
+    text-align: left;
+}
+.strelka h4{
+	margin-bottom: 20px;
+}
+#companyPage1 .strelka h4{
+    margin-left:-64px;
+}
+#companyPage2 .strelka h4{
+    margin-left:-35px;
+}#companyPage3 .strelka h4{
+    margin-left:-40px;
+}
+
+#companyPage4 .woman{
+    width:75%;
+}
+/*End of Company page*/
+/*Project page*/
+.project_img{
+    position: relative;
+    display:block;
+    height:100%;
+}
+.projects{
+    position: relative;
+    overflow: hidden;
+}
+.project_img img{
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+.hidden_project{
+    display: none;
+    /*position:absolute;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: rgba(255,255,255,0.4);*/
+    /*opacity: 0;*/
+    /*filter: alpha(opacity=0);*/
+}
+/*.hidden_project:hover{*/
+/*opacity: 1;*/
+/*filter: alpha(opacity=100);*/
+/*-webkit-transition: opacity .15s ease-in-out;*/
+/*-moz-transition: opacity .15s ease-in-out;*/
+/*-ms-transition: opacity .15s ease-in-out;*/
+/*-o-transition: opacity .15s ease-in-out;*/
+/*transition: opacity .15s ease-in-out;*/
+/*}*/
+.projects .container-fluid{
+    padding-left:0;
+    padding-right:0;
+    height:100%;
+}
+.project_description{
+    position: absolute;
+    top: 85px;
+    left: 35px;
+}
+.project_link {
+    position: absolute;
+    bottom: 5px;
+    left:5px;
+}
+.project_link p{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.project_description h3{
+    color: #3d811b;
+}
+.project_description p{
+    color: #FFFFFF;
+}
+.project_link{
+    color: #FFFFFF;
+}
+.project_img:hover img{
+    opacity: 0.8;
+    -webkit-filter: invert(40%);
+    -moz-filter: invert(40%);
+    -ms-filter: invert(40%);
+    -o-filter: invert(40%);
+    filter: invert(40%);
+    filter: gray; /* IE 6-9 */
+}
+
+/*Projects end*/
+/*Contacts Page Start*/
+.contacts_page{
+    color: #000000;
+    font-family: Verdana;
+}
+.contacts_page{
+    color: #000000;
+}
+.contacts_page h1 {
+    color: #ff2d2d;
+    font-family:condensbold;
+    text-align: center;
+    font-size: 110px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1;
+    margin-top: 50px;
+}
+.contacts_page .social-links> div{
+    margin-top: 0%;
+    display: inline-block;
+    margin-right: 40px;
+}
+.contacts_page .social-links> div:last-child {
+    margin-right: 0px;
+}
+.right_slide {
+    transform: rotate(270deg);
+    position: absolute;
+    right: -48px;
+    top: 50%;
+    font-family: condensbold;
+    font-size: 56px;
+    color: #ff2d2d;
+    text-transform: uppercase;
+    cursor: default;
+}
+.right_slide p{
+    font-family:condensbold ;
+}
+.comment{
+    cursor: pointer;
+    position:absolute;
+    right: 40px;
+    top: 50%;
+}
+.look_at_the_map{
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    margin-right: -130px;
+    margin-bottom: 0px;
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function:linear;
+    -moz-transition-timing-function:linear;
+    transition-timing-function: linear;
+    transition-duration: 350ms;
+}
+.wrapper.toggled .look_at_the_map{
+    position: absolute;
+    margin-right: -300px;
+}
+.contacts_page .phoneLogo{
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+.phorma_zayavki{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 400px;
+    width: 0;
+    height: 100%;
+    margin-right: -400px;
+    overflow-y: auto;
+    background: #ff2d2d;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.phorma_zayavki .comment{
+    margin: 68px 0 12px 0;
+    position: relative;
+    top:0;
+    right: 0;
+}
+
+.phorma_zayavki p {
+    display:block;
+    text-align: center;
+    color: #ffffff;
+    font-family:condensbold;
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.phorma_zayavki input.form-control{
+    margin: 0 0 10px 0;
+    border: solid #961f1f 4px;
+    height:40px;
+    background: #ff2d2d;
+    color: #ffffff;
+    padding:5px 10px 5px;
+}
+.phorma_zayavki textarea{
+    background: #ff2d2d;
+    border: solid #961f1f 4px;
+    color: #ffffff;
+    padding:5px 10px 5px;
+}
+.
+.phorma_zayavki .podtv{
+
+}
+.wrapper.toggled2 .phorma_zayavki {
+    width:400px;
+}
+ul#second{
+    display:none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.emailAddres > div, p{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.telContacts > div, p{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.emailAddres > div, p{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
