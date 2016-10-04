@@ -71,21 +71,31 @@
         <p>Оставить заявку</p>
     </div>
 </div>
+
 <div class="phorma_zayavki">
     <div class="comment">
         <img src="/template/images/comment_logo_asd.png" alt="comment" class="img-responsive center-block">
     </div>
     <p>Ваша заявка</p>
-    <form name="zayavka" method="get" action="">
+    <?php if ($result): ?>
+        <p>Сообщение отправлено! Мы ответим Вам на указанный email.</p>
+    <?php else: ?>
+    <?php if (isset($errors) && is_array($errors)): ?>
+        <ul>
+            <?php foreach ($errors as $error): ?>
+                <li> - <?php echo $error; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+    <form name="zayavka" method="post" action="#">
         <div class="input-group">
-            <input type="text" class="form-control" value="Ваше имя" name="Name" onfocus="if (this.value == 'Ваше имя') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ваше имя';}">
-            <input type="text" class="form-control" value="Эл. почта" name="email" onfocus="if (this.value == 'Эл. почта') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Эл. почта';}">
-            <input type="text" class="form-control" value="Телефон" name="phone Number" onfocus="if (this.value == 'Телефон') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Телефон';}">
-            <textarea rows="6" cols="20" placeholder="Текст сообщения" type="text" class="form-control" name="Text">
-                </textarea>
+            <input type="text" class="form-control" value="<?php echo $userName; ?>" name="Name" onfocus="if (this.value == 'Ваше имя') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ваше имя';}">
+            <input type="email" class="form-control" value="<?php echo $userEmail; ?>" name="userEmail" onfocus="if (this.value == 'Эл. почта') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Эл. почта';}">
+            <input type="text" class="form-control" value="<?php echo $phoneNumber ?>" name="phoneNumber" onfocus="if (this.value == 'Телефон') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Телефон';}">
         </div>
         <input type="submit" class="otpravka btn btn-default center-block" id="submit button" value="отправить заявку">
     </form>
+    <?php endif; ?>
 
 </div>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -95,16 +105,7 @@
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
 <!--<script src="/template/js/jquery-3.1.0.js" ></script>-->
-<script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            anchors: ["fullpage1","fullpage2", "fullpage3","fullpage4"],
-            menu: '#pagination',
-//            navigation: true,
-//            navigationPosition: right;
-        });
-    });
-</script>
+
 <script>
     $(".menu-toggle").click(function (e) {
         e.preventDefault();

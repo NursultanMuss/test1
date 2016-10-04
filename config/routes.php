@@ -1,7 +1,7 @@
 <?php
 return array(
 
-	'contacts'=>'contacts/index',
+	'contacts'=>'site/contacts',
 	'projects'=>'projects/index',
 	'company'=>'company/index',
 	'' => 'site/index' // actionIndex & SiteController;
