@@ -87,13 +87,15 @@
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
-    <form name="zayavka" method="post" action="#">
+    <form id="zayavka" name="zayavka" method="post" action="#">
         <div class="input-group">
-            <input type="text" class="form-control" value="<?php echo $userName; ?>" name="Name" onfocus="if (this.value == 'Ваше имя') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ваше имя';}">
-            <input type="email" class="form-control" value="<?php echo $userEmail; ?>" name="userEmail" onfocus="if (this.value == 'Эл. почта') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Эл. почта';}">
-            <input type="text" class="form-control" value="<?php echo $phoneNumber ?>" name="phoneNumber" onfocus="if (this.value == 'Телефон') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Телефон';}">
+            <input type="text" class="form-control" value="<?php echo $userName; ?>" name="userName" placeholder="Your Name">
+            <input type="email" class="form-control" value="<?php echo $userEmail; ?>" name="userEmail" placeholder="Your Email">
+            <input type="text" class="form-control" value="<?php echo $phoneNumber ?>" name="phoneNumber" placeholder="Your phone number">
+            <textarea rows="6" cols="20" placeholder="Текст сообщения" type="text" class="form-control" name="userText">
+                </textarea>
         </div>
-        <input type="submit" class="otpravka btn btn-default center-block" id="submit button" value="отправить заявку">
+        <input type="submit" name="submit" class="otpravka btn btn-default center-block" id="submit button" value="отправить заявку">
     </form>
     <?php endif; ?>
 
@@ -113,6 +115,9 @@
     });
     $(".comment").click(function (e){
         e.preventDefault();
+        $(".wrapper").toggleClass("toggled2");
+    });
+    $("#zayavka").submit(function (){
         $(".wrapper").toggleClass("toggled2");
     });
 </script>

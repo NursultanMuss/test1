@@ -1,5 +1,6 @@
 <?php
 include_once ROOT. '/models/Site.php';
+include_once ROOT. '/models/User.php';
 class SiteController
 {
 
@@ -8,7 +9,7 @@ class SiteController
 		{
 			$sitePages= array();
 			$sitePages= Site::getSitePages();
-			require_once(ROOT. '/views/site/contacts.php');
+			require_once(ROOT. '/views/site/index.php');
 			return true;
 		}
 
@@ -16,6 +17,7 @@ class SiteController
 		    $userName = '';
 		    $userEmail = '';
             $phoneNumber = '';
+            $userText ='';
             $result = false;
 
             if (isset($_POST['submit'])) {
@@ -23,6 +25,7 @@ class SiteController
                 $userName = $_POST['userName'];
                 $userEmail = $_POST['userEmail'];
                 $phoneNumber= $_POST['phoneNumber'];
+                $userText = $_POST['userText'];
 
                 $errors = false;
 
@@ -33,7 +36,7 @@ class SiteController
 
                 if ($errors == false) {
                     $adminEmail = 'nursalga@gmail.com';
-                    $message = "Текст:  От {$userName} {$userEmail}. Номер {$phoneNumber}";
+                    $message = "Текст: {$userText}.От {$userName} {$userEmail}. Номер {$phoneNumber}";
                     $subject = 'Заявка';
                     $result = mail($adminEmail, $subject, $message);
                     $result = true;

@@ -243,10 +243,9 @@ ul#second a {
 	/*fonts*/
 @font-face {
 	font-family: 'condensbold';
-	src: url('/template/fonts/condens-bold.eot');
-	src: url('/template/fonts/condens-bold.eot?#iefix') format('embedded-opentype'),
-	url('/template/fonts/condens-bold.woff') format('woff'),
-	url('/template/fonts/condens-bold.ttf') format('truetype');
+	src: url('/template/fonts/CondensBold.ttf') format('truetype');
+	src: url('/template/fonts/CondensBold.svg') format('svg'),
+	url('/template/fonts/CondensBold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
