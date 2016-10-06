@@ -684,3 +684,23 @@ ul#second{
     font: 35px condensbold;
     color: #ffffff;
 }
+
+/*AdminPage*/
+.admin-login .login{
+	width:164px;
+	margin:10% auto 30px;
+}
+.admin-login .content{
+	width: 300px;
+	padding: 20px 30px 15px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.admin-login {
+	color: #000;
+}
+.admin-login .checkbox{
+	display:inline-block;
+}
+
+/*End of AdminPage*/

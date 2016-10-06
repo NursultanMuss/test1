@@ -1,0 +1,32 @@
+/*AdminPage*/
+.admin-login .login{
+    width:164px;
+    margin:10% auto 30px;
+}
+.admin-login .content{
+    width: 300px;
+    padding: 20px 30px 15px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.admin-login h3{
+    font-weight: 300;
+}
+.admin-login {
+    color: #000;
+    font-family: 'Open Sans',sans-serif;
+}
+.admin-login .checkbox{
+    display:inline-block;
+}
+.create-account{
+    border-top: 1px dotted #eee;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.login .content .input-icon {
+    border-left: 2px solid #35aa47 !important;
+}
+
+/*End of AdminPage*/
