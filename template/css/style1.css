@@ -434,6 +434,12 @@ ul#second a {
 #companyPage4 .woman{
     width:75%;
 }
+#companyPage1 .woman{
+	width:92%;
+}
+#companyPage4 .pageText{
+	margin-top:60px;
+}
 /*End of Company page*/
 
 
