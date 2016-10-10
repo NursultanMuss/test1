@@ -1,4 +1,4 @@
-<?php include_once ROOT."/views/layout/header_admin.php";?>
+<?php include_once ROOT."/views/layout/header.php";?>
 <div class="login">
     <a href="/" class="logo"><img class="img-responsive" src="/template/images/greengoLogo.png" alt="Greergo_logo"></a>
 </div>
@@ -55,4 +55,4 @@
 <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 770px; width: 1440px; z-index: -999999; position: fixed;"><img src="https://d2599kud7uucku.cloudfront.net/themes/h2/img/bg/7.jpg?v=2.3.2" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1440px; height: 1080.38px; max-width: none; z-index: -999999; left: 0px; top: -155.191px;"></div>
 
 
-<?php include_once ROOT.'/views/layout/footer_admin.php'?>
+<?php include_once ROOT.'/views/layout/footer.php'?>

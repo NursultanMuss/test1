@@ -1,13 +1,23 @@
 <?php
-
+/**
+ * Класс Router
+ * Компонент для работы с маршрутами
+ */
 class Router
 {
-
+	/**
+	 * Свойство для хранения массива роутов
+	 * @var array
+	 */
 	private $routes;
-
+	/**
+	 * Конструктор
+	 */
 	public function __construct()
 	{
+		// Путь к файлу с роутами
 		$routesPath = ROOT.'/config/routes.php';
+		// Получаем роуты из файла
 		$this->routes = include($routesPath);
 	}
 
@@ -23,15 +33,12 @@ class Router
 	public function run()
 	{
 		$uri = $this->getURI();
-
+		//	echo $uri .'</br>';
 
 		foreach ($this->routes as $uriPattern => $path) {
 
 			if(preg_match("~$uriPattern~", $uri)) {
-
-/*				echo "<br>Где ищем (запрос, который набрал пользователь): ".$uri;
-				echo "<br>Что ищем (совпадение из правила): ".$uriPattern;
-				echo "<br>Кто обрабатывает: ".$path; */
+			//echo $path;
 
 				// Получаем внутренний путь из внешнего согласно правилу.
 
@@ -40,12 +47,14 @@ class Router
 /*				echo '<br>Нужно сформулировать: '.$internalRoute.'<br>'; */
 
 				$segments = explode('/', $internalRoute);
-
+//				echo "<pre>";
+//					print_r($segments)	;
+//				echo "</pre>".'</br>';
 
 				$controllerName = array_shift($segments).'Controller';
 				$controllerName = ucfirst($controllerName);
-			
-
+//					echo $controllerName .'</br>';
+//					echo array_shift($segments);
 				$actionName = 'action'.ucfirst(array_shift($segments));
 
 				$parameters = $segments;

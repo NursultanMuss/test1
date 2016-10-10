@@ -8,6 +8,8 @@
         <title>Админпанель</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="/template/css/admincss.css">
+        <link href="/template/css/main.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/ced0a1df4f.js"></script>
 
         <!--[if lt IE 9]>
         <script src="/template/js/html5shiv.js"></script>
@@ -20,5 +22,29 @@
     </head><!--/head-->
 
     <body class="admin-login">
+    <div class="page-wrapper">
+
+        <header id="header"><!--header-->
+            <div class="header_top"><!--header_top-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="contactinfo">
+                                <h5>
+                                    <a href="/admin"><i class="fa fa-edit"></i> Админпанель</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="social-icons pull-right">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/user/logout"><i class="fa fa-sign-out"></i>На сайт</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/header_top-->
+
 
                

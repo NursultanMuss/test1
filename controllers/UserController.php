@@ -91,7 +91,7 @@ class UserController
                 User::auth($userId);
 
                 // Перенаправляем пользователя в закрытую часть - кабинет 
-                header("Location: /cabinet");
+                header("Location: /admin");
             }
         }
 
@@ -106,7 +106,7 @@ class UserController
     public function actionLogout()
     {
         // Стартуем сессию
-        session_start();
+       
         
         // Удаляем информацию о пользователе из сессии
         unset($_SESSION["user"]);

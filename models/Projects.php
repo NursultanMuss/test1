@@ -18,4 +18,24 @@ class Projects
         }
         return $projectsPage;
     }
+
+    public static function createProject($options){
+        $db=DB::getConnection();
+
+        $sql='INSERT INTO projects '
+            . '(image, description, link)'
+            .'VALUES '
+            . '(:image, :description, :link)';
+        $result = $db->prepare($sql);
+        $result->bindParam(':image', $options['image'], PDO::PARAM_STR);
+        $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+        $result->bindParam(':link', $options['link'], PDO::PARAM_STR);
+        if($result->execute()){
+            return $db->lastInsertId();
+        }
+        return 0;
+
+    }
+    
+
 }

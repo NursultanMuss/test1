@@ -1,27 +1,24 @@
-    <div class="page-buffer"></div>
-</div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.siftscience.com/s.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        App.init();
+        Login.init();
+        $('.login').attr('style', '');
 
-<footer id="footer" class="page-footer"><!--Footer-->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <p class="pull-left">Copyright © 2015</p>
-                <p class="pull-right">Курс PHP Start</p>
-            </div>
-        </div>
-    </div>
-</footer><!--/Footer-->
+        $.backstretch([
+            "https://d2599kud7uucku.cloudfront.net/themes/h2/img/bg/6.jpg?v=2.3.2",
+            "https://d2599kud7uucku.cloudfront.net/themes/h2/img/bg/7.jpg?v=2.3.2",
+            "https://d2599kud7uucku.cloudfront.net/themes/h2/img/bg/8.jpg?v=2.3.2"
+        ], {
+            fade: 1000,
+            duration: 1000
+        });
 
-
-
-<script src="/template/js/jquery.js"></script>
-<script src="/template/js/jquery.cycle2.min.js"></script>
-<script src="/template/js/jquery.cycle2.carousel.min.js"></script>
-<script src="/template/js/bootstrap.min.js"></script>
-<script src="/template/js/jquery.scrollUp.min.js"></script>
-<script src="/template/js/price-range.js"></script>
-<script src="/template/js/jquery.prettyPhoto.js"></script>
-<script src="/template/js/main.js"></script>
+    });
+</script>
 <script>
     $(document).ready(function(){
         $(".add-to-cart").click(function () {
