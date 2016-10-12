@@ -39,6 +39,7 @@
 
                         <p>Ссылка на проект</p>
                         <input type="text" name="link" placeholder="" value="">
+                        <input type="file" name="imageSource" placeholder="" value="">
 
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
 

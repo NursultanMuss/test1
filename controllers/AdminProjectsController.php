@@ -48,22 +48,23 @@ class AdminProjectsController extends AdminBase
                 $id = Projects::createProject($options);
 
                 // Если запись добавлена
-               // if ($id) {
+                if ($id) {
                     // Проверим, загружалось ли через форму изображение
-                  //  if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                    if (is_uploaded_file($_FILES["imageSource"]["tmp_name"])) {
                         // Если загружалось, переместим его в нужную папке, дадим новое имя
-                       // move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
-                  //  }
-                };
+                        move_uploaded_file($_FILES["imageSource"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/template/images/".$options['image']);
+                    }
+                }
 
                 // Перенаправляем пользователя на страницу управлениями projects
                 header("Location: /admin/projects");
             }
+        }
+            //Get view of the page
+            require_once(ROOT . '/views/admin_projects/create.php');
+            return true;
+        }
 
-        //Get view of the page
-        require_once(ROOT . '/views/admin_projects/create.php');
-        return true;
-    }
     public function actionDelete($id)
     {
         // Проверка доступа
@@ -108,11 +109,11 @@ class AdminProjectsController extends AdminBase
 
                 // Если запись сохранена
                 // Проверим, загружалось ли через форму изображение
-           //     if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                if (is_uploaded_file($_FILES["imageSource"]["tmp_name"])) {
 
                     // Если загружалось, переместим его в нужную папке, дадим новое имя
-              //      move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
-               // }
+                    move_uploaded_file($_FILES["imageSource"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/template/images/".$project['image']);
+               }
             }
 
             // Перенаправляем пользователя на страницу управлениями товарами

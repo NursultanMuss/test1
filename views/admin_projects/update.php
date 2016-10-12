@@ -24,18 +24,18 @@
                     <form action="#" method="post" enctype="multipart/form-data">
 
                         <p>Название фото проекта</p>
-                        <input type="text" name="name" placeholder="" value="<?php echo $project['image']; ?>">
+                        <input type="text" name="image" placeholder="" value="<?php echo $project['image']; ?>">
 
                         <p>Описание проекта</p>
-                        <input type="text" name="code" placeholder="" value="<?php echo $project['description']; ?>">
+                        <input type="text" name="description" placeholder="" value="<?php echo $project['description']; ?>">
 
                         <p>Ссылка на проект</p>
-                        <input type="text" name="price" placeholder="" value="<?php echo $project['link']; ?>">
+                        <input type="text" name="link" placeholder="" value="<?php echo $project['link']; ?>">
 
-<!--                        <p>Изображение проекта</p>-->
-<!--                        <img src="--><?php //echo Product::getImage($project['id']); ?><!--" width="200" alt="" />-->
-<!--                        <input type="file" name="image" placeholder="" value="--><?php //echo $project['image']; ?><!--">-->
-<!--                        -->
+                        <p>Изображение проекта</p>
+                        <img src="<?php echo Projects::getImage($project['id']); ?>" width="200" alt="" />
+                        <input type="file" name="image" placeholder="" value="<?php echo $project['image']; ?>">
+
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                         
                         <br/><br/>

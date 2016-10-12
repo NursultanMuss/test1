@@ -89,7 +89,7 @@ class Projects
 
         // Текст запроса к БД
         $sql = "UPDATE projects
-            SET 
+            SET
                 image = :image, 
                 description = :description, 
                 link = :link, 
@@ -102,6 +102,20 @@ class Projects
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':link', $options['link'], PDO::PARAM_STR);
         return $result->execute();
+    }
+    
+    public static function getImage($id){
+        $noImage='no-image.jpg';
+        $imageName=self::getProjectById($id);
+        $path="/template/images/";
+
+        $pathToProjectImage= $path.$imageName['image'];
+
+        if(file_exists($_SERVER['DOCUMENT_ROOT'].$pathToProjectImage)){
+            return $pathToProjectImage;
+        }
+        
+        return $path.$noImage;
     }
     
 
