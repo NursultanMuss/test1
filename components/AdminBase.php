@@ -25,7 +25,8 @@ abstract class AdminBase
         }
 
         // Иначе завершаем работу с сообщением об закрытом доступе
-        die('Access denied');
+        header("Location: /user/login");
+      
     }
 
 }

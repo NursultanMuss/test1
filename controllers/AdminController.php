@@ -18,5 +18,17 @@ class AdminController extends AdminBase
         require_once(ROOT . '/views/admin/index.php');
         return true;
     }
+   /* public function actionProjects()
+    {
+        //Access control
+        self::checkAdmin();
+
+        //Get projects list
+        $projectsList = Projects::getProjectsPage();
+
+        //Turn on view
+        require_once(ROOT . '/views/admin_projects/index.php');
+        return true;
+    }*/
 
 }

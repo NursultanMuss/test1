@@ -32,32 +32,96 @@ class AdminProjectsController extends AdminBase
             //If form sent
             //Get data from form
             $options['image'] = $_POST['image'];
-            $options['descrition'] = $_POST['descrition'];
+            $options['description'] = $_POST['description'];
             $options['link'] = $_POST['link'];
-        }
-        $errors = false;
 
-        // При необходимости можно валидировать значения нужным образом
-        if (!isset($options['image']) || empty($options['image'])) {
-            $errors[] = 'Заполните поля';
-        }
+            $errors = false;
 
-        if ($errors == false) {
-            // Если ошибок нет
-            // Добавляем новый project
-            $id = Projects::createProject($options);
+            // При необходимости можно валидировать значения нужным образом
+            if (!isset($options['image']) || empty($options['image'])) {
+                $errors[] = 'Заполните поля';
+            }
 
-            // Если запись добавлена
-            if ($id) {
-                // Проверим, загружалось ли через форму изображение
-                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-                    // Если загружалось, переместим его в нужную папке, дадим новое имя
-                    move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
-                }
-            };
+            if ($errors == false) {
+                // Если ошибок нет
+                // Добавляем новый project
+                $id = Projects::createProject($options);
 
-            // Перенаправляем пользователя на страницу управлениями projects
+                // Если запись добавлена
+               // if ($id) {
+                    // Проверим, загружалось ли через форму изображение
+                  //  if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                        // Если загружалось, переместим его в нужную папке, дадим новое имя
+                       // move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
+                  //  }
+                };
+
+                // Перенаправляем пользователя на страницу управлениями projects
+                header("Location: /admin/projects");
+            }
+
+        //Get view of the page
+        require_once(ROOT . '/views/admin_projects/create.php');
+        return true;
+    }
+    public function actionDelete($id)
+    {
+        // Проверка доступа
+        self::checkAdmin();
+
+        // Обработка формы
+        if (isset($_POST['submit'])) {
+            // Если форма отправлена
+            // Удаляем товар
+            Projects::deleteProjectById($id);
+
+            // Перенаправляем пользователя на страницу управлениями товарами
             header("Location: /admin/projects");
         }
+        if(isset($_POST['not'])){
+         header("Location: /admin/projects");
+        }
+        // Подключаем вид
+        require_once(ROOT . '/views/admin_projects/delete.php');
+        return true;
     }
+
+    public function actionUpdate($id)
+    {
+        // Проверка доступа
+        self::checkAdmin();
+
+        // Получаем данные о конкретном проекте
+        $project = Projects::getProjectById($id);
+
+        // Обработка формы
+        if (isset($_POST['submit'])) {
+            // Если форма отправлена
+            // Получаем данные из формы редактирования. При необходимости можно валидировать значения
+            $options['image'] = $_POST['image'];
+            $options['description'] = $_POST['description'];
+            $options['link'] = $_POST['link'];
+
+            // Сохраняем изменения
+            if (Projects::updateProjectById($id, $options)) {
+
+
+                // Если запись сохранена
+                // Проверим, загружалось ли через форму изображение
+           //     if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+
+                    // Если загружалось, переместим его в нужную папке, дадим новое имя
+              //      move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
+               // }
+            }
+
+            // Перенаправляем пользователя на страницу управлениями товарами
+            header("Location: /admin/projects");
+        }
+
+        // Подключаем вид
+        require_once(ROOT . '/views/admin_projects/update.php');
+        return true;
+    }
+
 }

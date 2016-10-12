@@ -9,7 +9,7 @@
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/product">Управление проектами</a></li>
+                    <li><a href="/admin/projects">Управление проектами</a></li>
                     <li class="active">Редактировать проект</li>
                 </ol>
             </div>
@@ -31,7 +31,7 @@
                 <div class="login-form">
                     <form action="#" method="post" enctype="multipart/form-data">
 
-                        <p>Картинка проекта</p>
+                        <p>Название фото проекта</p>
                         <input type="text" name="image" placeholder="" value="">
 
                         <p>Описание проекта</p>

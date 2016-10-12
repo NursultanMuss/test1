@@ -1,9 +1,7 @@
 <?php
 return array(
 
-	'contacts'=>'site/contacts',
-	'projects'=>'projects/index',
-	'company'=>'company/index',
+
     // Пользователь:
     'user/register' => 'user/register',
     'user/login' => 'user/login',
@@ -16,7 +14,11 @@ return array(
 	'admin/projects/delete/([0-9]+)' => 'adminProjects/delete/$1',
 	'admin/projects' => 'adminProjects/index',
     // Админпанель:
-    'admin' => 'admin/index',
+	'admin' => 'admin/index',
+	'projects'=>'projects/index',
+	'contacts'=>'site/contacts',
+	'company'=>'company/index',
+	'index.php'=> 'site/index',
 	'' => 'site/index' // actionIndex & SiteController;
 
 

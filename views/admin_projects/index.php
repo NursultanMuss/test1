@@ -28,14 +28,14 @@
                     <th></th>
                     <th></th>
                 </tr>
-                <?php foreach ($projectsList as $product): ?>
+                <?php foreach ($projectsList as $project): ?>
                     <tr>
-                        <td><?php echo $product['id']; ?></td>
-                        <td><?php echo $product['image']; ?></td>
-                        <td><?php echo $product['description']; ?></td>
-                        <td><?php echo $product['link']; ?></td>
-                        <td><a href="/admin/product/update/<?php echo $product['id']; ?>" title="Редактировать"><i class="fa fa-pencil-square-o"></i></a></td>
-                        <td><a href="/admin/product/delete/<?php echo $product['id']; ?>" title="Удалить"><i class="fa fa-times"></i></a></td>
+                        <td><?php echo $project['id']; ?></td>
+                        <td><?php echo $project['image']; ?></td>
+                        <td><?php echo $project['description']; ?></td>
+                        <td><?php echo $project['link']; ?></td>
+                        <td><a href="/admin/projects/update/<?php echo $project['id']; ?>" title="Редактировать"><i class="fa fa-pencil-square-o"></i></a></td>
+                        <td><a href="/admin/projects/delete/<?php echo $project['id']; ?>" title="Удалить"><i class="fa fa-times"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

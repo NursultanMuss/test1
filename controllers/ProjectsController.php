@@ -12,7 +12,7 @@ include_once ROOT.'/models/Projects.php';
         public function actionIndex(){
             $projectsPage= array();
             $projectsPage=Projects::getProjectsPage();
-            require_once ROOT.'/views/projects/contacts.php';
+            require_once ROOT.'/views/projects/index.php';
             return true;
         }
     }

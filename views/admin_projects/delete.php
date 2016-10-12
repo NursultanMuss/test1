@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header_admin.php'; ?>
+<?php include ROOT . '/views/layout/header_admin.php'; ?>
 
 <section>
     <div class="container">
@@ -22,11 +22,12 @@
 
             <form method="post">
                 <input type="submit" name="submit" value="Удалить" />
+                <input type="submit" name="not" value="Нет" />
             </form>
 
         </div>
     </div>
 </section>
 
-<?php include ROOT . '/views/layouts/footer_admin.php'; ?>
+<?php include ROOT . '/views/layout/footer_admin.php'; ?>
 
