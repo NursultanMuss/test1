@@ -1,9 +1,9 @@
 <?php
-
+include_once (ROOT."/components/Db.php");
 class Site
 {
     public static function getSitePages(){
-        $db=DB::getConnection();
+        $db=Db::getConnection();
         $sitePages= array();
 
         $result= $db->query('SELECT id, section_background, page_logo, slide_text, google, yandex, superman FROM mainpage ORDER BY id ASC');

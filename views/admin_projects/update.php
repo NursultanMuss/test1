@@ -34,7 +34,7 @@
 
                         <p>Изображение проекта</p>
                         <img src="<?php echo Projects::getImage($project['id']); ?>" width="200" alt="" />
-                        <input type="file" name="image" placeholder="" value="<?php echo $project['image']; ?>">
+                        <input type="file" name="imageSource" placeholder="" value="<?php echo $project['imageSource']; ?>">
 
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                         

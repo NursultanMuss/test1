@@ -1,5 +1,5 @@
 <?php
-
+include_once (ROOT."/components/Db.php");
 class Projects
 {
     /**
@@ -92,7 +92,7 @@ class Projects
             SET
                 image = :image, 
                 description = :description, 
-                link = :link, 
+                link = :link 
             WHERE id = :id";
 
         // Получение и возврат результатов. Используется подготовленный запрос

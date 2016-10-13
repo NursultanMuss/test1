@@ -1,4 +1,5 @@
 <?php
+include_once (ROOT."/components/Db.php");
 
 class Company
 {
