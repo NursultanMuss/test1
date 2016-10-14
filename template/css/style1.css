@@ -164,7 +164,7 @@ ul#second a {
 
 .icon-menu {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 7%;
   left: 5%;
 	z-index: 10;

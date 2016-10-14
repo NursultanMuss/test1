@@ -1,6 +1,6 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/ced0a1df4f.js"></script>
+<script src="/template/js/bootstrap.min.js"></script>
 <script src="https://cdn.siftscience.com/s.js"></script>
 <script>
     jQuery(document).ready(function() {
